@@ -1,5 +1,10 @@
 body {
+  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 120px;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
 }
 
 /* ----------------------------------------------------------------- */
@@ -9,7 +14,6 @@ body {
 .navbar-brand > img {
    max-height: 100%;
    height: 100%;
-   padding: 25px;
    -o-object-fit: contain;
    object-fit: contain;
   }
@@ -19,8 +23,9 @@ body {
   line-height: 120px;
   height: 120px;
   overflow: visible;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 22px;
+  padding-right: 30px;
 }
 
 /* ----------------------------------------------------------------- */
@@ -32,7 +37,6 @@ body {
 /* Custom Top Nav ---------------------------------------------------*/
 /* ----------------------------------------------------------------- */
 
-/* Styles before scroll */
 #top-nav {
   background-color: #ffffff;
   border: 0;
@@ -47,16 +51,15 @@ body {
 
 #top-nav .container {
   border-bottom: 1px #00b4e6 solid;
-  border-bottom: 1px #eee solid;
 }
 
-#top-nav .navbar-nav>li>a {
-  line-height: 90px;
+#top-nav .navbar-nav {
+  margin-top: 40px;
+  /* margin-bottom: 40px; */
 }
 
 #top-nav .navbar-toggle {
   margin-top: 45px;
-  margin-bottom: 40px;
 }
 
 /* ----------------------------------------------------------------- */
@@ -64,7 +67,7 @@ body {
 /* ----------------------------------------------------------------- */
 
 /* ----------------------------------------------------------------- */
-/* Custom Top Nav ---------------------------------------------------*/
+/* Custom Footer Nav ------------------------------------------------*/
 /* ----------------------------------------------------------------- */
 
 #footer-nav {
@@ -75,11 +78,35 @@ body {
 }
 
 #footer-nav .container {
-  padding-top: 50px;
- 	padding-bottom: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: #ffffff;
+  font-weight: bold;
 }
 
 /* ----------------------------------------------------------------- */
-/* Custom Top Nav END -----------------------------------------------*/
+/* Custom Footer Nav END --------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------- */
+/* Proxima-nova Font Import -----------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('../font/proximanova-webfont.eot');
+  src: url('../font/proximanova-webfont.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('../font/proximanova-bold-webfont.eot');
+  src: url('../font/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* ----------------------------------------------------------------- */
+/* Proxima-nova Font Import END--------------------------------------*/
 /* ----------------------------------------------------------------- */
