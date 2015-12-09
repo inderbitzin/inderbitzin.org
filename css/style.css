@@ -1,10 +1,5 @@
 body {
   font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding-top: 120px;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
 }
 
 a {
@@ -14,6 +9,121 @@ a {
 #map-contact {
   height: 250px;
 }
+
+section {
+  padding-top: 140px;
+}
+
+/* ----------------------------------------------------------------- */
+/* Heading Title ----------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 20px auto 20px;
+  background: #00b4e6;
+}
+
+/* ----------------------------------------------------------------- */
+/* Heading Title END ------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------- */
+/* Team -------------------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+.team-member .social a.facebook {
+  background-color: #4460ae;
+}
+
+.team-member .social a.gplus {
+  background-color: #c21f25;
+}
+
+.team-member .social a.twitter {
+  background-color: #3cf;
+}
+
+.team-member .social a.email {
+  background-color: #4a7f45;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member .img-responsive {
+    margin: 0 auto;
+}
+
+.team-member .social {
+  margin-bottom: 20px;
+}
+
+.team-member .social a:hover {
+  top: -2px;
+}
+
+.team-member .social a i {
+  vertical-align: bottom;
+  line-height: 26px;
+}
+
+.team-member .social a {
+  position: relative;
+  margin: 0 5px 0 5px;
+  color: #fff;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  line-height: 26px;
+  font-size: 15px;
+  text-align: center;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  vertical-align: bottom;
+  top: 0;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* ----------------------------------------------------------------- */
+/* Team END ---------------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------- */
+/* Services Box -----------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+.box-services {
+  padding: 40px 20px 20px;
+  background: #00b4e6;
+  text-align: center;
+  color: #fff;
+}
+.box {
+  margin-bottom: 30px;
+}
+
+/* ----------------------------------------------------------------- */
+/* Services Box END -------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
 
 /* ----------------------------------------------------------------- */
 /* Navbar Brand Image -----------------------------------------------*/
@@ -83,7 +193,7 @@ a {
   font-size: 16px;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav>.current>a, .navbar-default .navbar-nav>.current>a:focus, .navbar-default .navbar-nav>.current>a:hover {
   color: #00b4e6;
   background-color : transparent;
 }
@@ -121,6 +231,24 @@ a {
 
 /* ----------------------------------------------------------------- */
 /* Custom Footer Nav END --------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------- */
+/* Custom Selection -------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+/* ----------------------------------------------------------------- */
+/* Custom Selection END ---------------------------------------------*/
 /* ----------------------------------------------------------------- */
 
 /* ----------------------------------------------------------------- */
