@@ -132,6 +132,7 @@ h1, h2, h3 {
 
 #fade-quote-carousel.carousel .carousel-inner .item {
   opacity: 0;
+  min-height: 250px;
   -webkit-transition-property: opacity;
   -ms-transition-property: opacity;
   transition-property: opacity;
