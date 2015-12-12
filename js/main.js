@@ -33,10 +33,7 @@ function map() {
     map.addMarker({
       lat: 46.993844,
       lng: 8.606245,
-        icon: image,
-        title: 'Inderbitzin Informatik',
-        infoWindow: {
-            content: '<p>Inderbitzin Informatik</p>'
-        }
+      icon: image,
+      title: 'Inderbitzin Informatik GmbH'
     });
 }
