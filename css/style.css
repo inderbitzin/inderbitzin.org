@@ -52,6 +52,11 @@ h1, h2, h3 {
   background-color: #c21f25;
 }
 
+.team-member .social a.linkedin {
+  background-color: #006fa6;
+}
+
+
 .team-member .social a.twitter {
   background-color: #3cf;
 }
