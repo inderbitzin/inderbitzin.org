@@ -1,5 +1,11 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
   font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 110px;
 }
 
 a {
@@ -12,6 +18,10 @@ a {
 
 section {
   padding-top: 140px;
+}
+
+.lead {
+  text-align: center;
 }
 
 /* ----------------------------------------------------------------- */
@@ -189,6 +199,7 @@ h1, h2, h3 {
 }
 .box {
   margin-bottom: 30px;
+  min-height: 300px;
 }
 
 /* ----------------------------------------------------------------- */
@@ -294,6 +305,7 @@ h1, h2, h3 {
 /* ----------------------------------------------------------------- */
 
 .footer {
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #00b4e6;
