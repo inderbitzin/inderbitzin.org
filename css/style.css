@@ -7,6 +7,7 @@ html {
 
 body {
   font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   color: #000;
   /* margin-bottom: 110px; */
   width: 100%;
@@ -28,6 +29,152 @@ section {
 .lead {
   text-align: center;
 }
+
+/* ----------------------------------------------------------------- */
+/* Navbar Brand Image -----------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+.navbar-brand > img {
+   max-height: 100%;
+   height: 100%;
+   -o-object-fit: contain;
+   object-fit: contain;
+  }
+
+.navbar-brand {
+  max-height: 120px;
+  line-height: 120px;
+  height: 120px;
+  overflow: visible;
+  padding-top: 30px;
+  padding-bottom: 22px;
+  padding-right: 30px;
+}
+
+/* ----------------------------------------------------------------- */
+/* Navbar Brand Image END -------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------- */
+/* Custom Top Nav ---------------------------------------------------*/
+/* ----------------------------------------------------------------- */
+
+#top-nav {
+  background-color: #ffffff;
+  border: 0;
+  box-shadow: none;
+}
+
+#top-nav .dropdown-menu {
+	border-radius: 0;
+	border: none;
+	padding-top: 0;
+}
+
+#top-nav .container {
+  border-bottom: 1px #00b4e6 solid;
+}
+
+#top-nav .navbar-nav {
+  margin-top: 40px;
+}
+
+#top-nav .navbar-toggle {
+  margin-top: 40px;
+}
+
+#top-nav .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #00b4e6;
+}
+
+#top-nav .dropdown-menu .divider {
+  background-color: #00b4e6;
+}
+
+.navbar-default .navbar-nav  {
+  font-weight: bold;
+  background-color : transparent;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color:#000;
+}
+
+.navbar-default .navbar-nav>.current>a, .navbar-default .navbar-nav>.current>a:focus, .navbar-default .navbar-nav>.current>a:hover {
+  color: #00b4e6;
+  background-color : transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color : transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #00b4e6;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.menu {
+	position: relative;
+	display:  inline-block;
+	width: 30px;
+	height: 30px;
+}
+.menu span {
+	margin: 0 auto;
+	position: relative;
+	top: 12px;
+}
+.menu span:before, .menu span:after {
+	position: absolute;
+	content: '';
+}
+.menu span, .menu span:before, .menu span:after {
+	width: 30px;
+	height: 4px;
+	background-color: #00b4e6;
+	display: block;
+}
+.menu span:before {
+	margin-top: -10px;
+}
+.menu span:after {
+	margin-top: 10px;
+}
+
+.navbar-toggle span {
+	-webkit-transition: 0.2s ease 0s; transition: 0.2s ease 0s;
+}
+.navbar-toggle span:before, .navbar-toggle span:after {
+	-webkit-transition-property: margin, opacity; transition-property: margin, opacity;
+	-webkit-transition-duration: 0.2s, 0s; transition-duration: 0.2s, 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.navbar-toggle:hover span {
+	width: 16px;
+	height: 16px;
+	margin-top: -5px;
+	-webkit-border-radius: 50%; border-radius: 50%;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.navbar-toggle:hover span:before, .navbar-toggle:hover span:after {
+	margin-top: 0px;
+	opacity: 0;
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+
+/* ----------------------------------------------------------------- */
+/* Custom Top Nav END -----------------------------------------------*/
+/* ----------------------------------------------------------------- */
 
 /* ----------------------------------------------------------------- */
 /* Intro ------------------------------------------------------------*/
@@ -64,7 +211,7 @@ section {
 
 @media(min-width:768px) {
   .intro {
-    height: 100%;
+    height: 75%;
     padding: 0;
   }
 
@@ -110,6 +257,40 @@ section {
   -moz-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
 }
 
 /* ----------------------------------------------------------------- */
@@ -294,95 +475,12 @@ h1, h2, h3 {
   min-height: 300px;
 }
 
+.box-title {
+  
+}
+
 /* ----------------------------------------------------------------- */
 /* Services Box END -------------------------------------------------*/
-/* ----------------------------------------------------------------- */
-
-
-/* ----------------------------------------------------------------- */
-/* Navbar Brand Image -----------------------------------------------*/
-/* ----------------------------------------------------------------- */
-
-.navbar-brand > img {
-   max-height: 100%;
-   height: 100%;
-   -o-object-fit: contain;
-   object-fit: contain;
-  }
-
-.navbar-brand {
-  max-height: 120px;
-  line-height: 120px;
-  height: 120px;
-  overflow: visible;
-  padding-top: 30px;
-  padding-bottom: 22px;
-  padding-right: 30px;
-}
-
-/* ----------------------------------------------------------------- */
-/* Navbar Brand Image END -------------------------------------------*/
-/* ----------------------------------------------------------------- */
-
-
-/* ----------------------------------------------------------------- */
-/* Custom Top Nav ---------------------------------------------------*/
-/* ----------------------------------------------------------------- */
-
-#top-nav {
-  background-color: #ffffff;
-  border: 0;
-  box-shadow: none;
-}
-
-#top-nav .dropdown-menu {
-	border-radius: 0;
-	border: none;
-	padding-top: 0;
-}
-
-#top-nav .container {
-  border-bottom: 1px #00b4e6 solid;
-}
-
-#top-nav .navbar-nav {
-  margin-top: 40px;
-}
-
-#top-nav .navbar-toggle {
-  margin-top: 45px;
-}
-
-#top-nav .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: #00b4e6;
-}
-
-#top-nav .dropdown-menu .divider {
-  background-color: #00b4e6;
-}
-
-.navbar-default .navbar-nav  {
-  font-weight: bold;
-  background-color : transparent;
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
-.navbar-default .navbar-nav>li>a{
-  color:#000;
-}
-
-.navbar-default .navbar-nav>.current>a, .navbar-default .navbar-nav>.current>a:focus, .navbar-default .navbar-nav>.current>a:hover {
-  color: #00b4e6;
-  background-color : transparent;
-}
-
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-  background-color : transparent;
-}
-
-/* ----------------------------------------------------------------- */
-/* Custom Top Nav END -----------------------------------------------*/
 /* ----------------------------------------------------------------- */
 
 /* ----------------------------------------------------------------- */
