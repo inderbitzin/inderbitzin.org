@@ -111,12 +111,7 @@ section {
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-  color:#000;
-  background-color : transparent;
-}
-
-.navbar-default .navbar-nav>.current>a, .navbar-default .navbar-nav>.current>a:focus, .navbar-default .navbar-nav>.current>a:hover {
-  color: #00b4e6;
+  color:#00b4e6;
   background-color : transparent;
 }
 
