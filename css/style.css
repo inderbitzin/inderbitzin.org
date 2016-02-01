@@ -7,7 +7,7 @@ html {
 
 body {
   font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #000;
   /* margin-bottom: 110px; */
   width: 100%;
@@ -16,6 +16,14 @@ body {
 
 a {
   color: #00b4e6;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 22px;
 }
 
 #map-contact {
@@ -108,6 +116,7 @@ section {
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color:#000;
   background-color : transparent;
 }
 
@@ -189,7 +198,7 @@ section {
   padding: 100px 0;
   text-align: center;
   color: #fff;
-  background: url(../images/error.jpg) no-repeat bottom center scroll;
+  background: url(../images/error.jpg) no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -211,7 +220,7 @@ section {
 
 @media(min-width:768px) {
   .intro {
-    height: 75%;
+    height: 60%;
     padding: 0;
   }
 
@@ -301,10 +310,6 @@ section {
 /* Heading Title ----------------------------------------------------*/
 /* ----------------------------------------------------------------- */
 
-h1, h2, h3 {
-  font-weight: bold;
-}
-
 .heading {
   text-align: center;
   margin-bottom: 40px;
@@ -350,6 +355,10 @@ h1, h2, h3 {
 
 .team-member {
   text-align: center;
+}
+
+.team-member img {
+  border-radius: 300px;
 }
 
 .team-member .img-responsive {
@@ -398,61 +407,70 @@ h1, h2, h3 {
 /* ----------------------------------------------------------------- */
 
 .quote {
-  /*color: rgba(0,0,0,.1);*/
   color: #00b4e6;
   text-align: center;
   margin-bottom: 30px;
 }
 
-#fade-quote-carousel h4 {
-  text-align: center;
-  font-weight: bold;
-}
-
-#fade-quote-carousel blockquote {
-  font-size: 16px;
-  font-style: italic;
-}
-
-#fade-quote-carousel.carousel {
+.carousel {
   padding-bottom: 60px;
 }
 
-#fade-quote-carousel.carousel .carousel-inner .item {
+.carousel h4 {
+  text-align: center;
+  font-weight: bold;
+  border: none;
+}
+
+.carousel img {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.carousel .carousel-inner .item {
+  min-height: 480px;
+}
+
+@media(min-width:768px) {
+  .carousel .carousel-inner .item {
+    min-height: 380px;
+  }
+}
+
+.carousel .carousel-inner .item blockquote {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  border: none;
+}
+
+.carousel .carousel-inner .item {
   opacity: 0;
-  min-height: 250px;
   -webkit-transition-property: opacity;
   -ms-transition-property: opacity;
   transition-property: opacity;
 }
 
-#fade-quote-carousel.carousel .carousel-inner .active {
+.carousel .carousel-inner .active {
   opacity: 1;
   -webkit-transition-property: opacity;
   -ms-transition-property: opacity;
   transition-property: opacity;
 }
 
-#fade-quote-carousel.carousel .carousel-indicators {
+.carousel .carousel-indicators {
   bottom: 10px;
 }
 
-#fade-quote-carousel.carousel .carousel-indicators > li {
+.carousel-indicators .active {
+  height: 16px;
+  width:  16px;
+}
+
+.carousel .carousel-indicators > li {
   background-color: #00b4e6;
+  vertical-align: middle;
   border: none;
-}
-
-#fade-quote-carousel blockquote {
-  text-align: center;
-  border: none;
-}
-
-#fade-quote-carousel .profile-circle {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 100px;
-  margin-bottom: 20px;
 }
 
 /* ----------------------------------------------------------------- */
@@ -472,11 +490,11 @@ h1, h2, h3 {
 }
 .box {
   margin-bottom: 30px;
-  min-height: 300px;
+  min-height: 340px;
 }
 
 .box-title {
-  
+
 }
 
 /* ----------------------------------------------------------------- */
