@@ -3,11 +3,6 @@ $(document).ready(function() {
     scrollOffset: 70,
 		scrollSpeed: 750,
 	});
-
-	$('#intro').onePageNav({
-    scrollOffset: 70,
-		scrollSpeed: 750,
-	});
 });
 
 map();
