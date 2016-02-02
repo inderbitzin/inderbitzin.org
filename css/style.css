@@ -110,7 +110,7 @@ section {
   color:#000;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav>.current>a, .navbar-default .navbar-nav>.current>a:focus, .navbar-default .navbar-nav>.current>a:hover {
   color:#00b4e6;
   background-color : transparent;
 }
