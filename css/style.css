@@ -127,54 +127,45 @@ section {
   background-color: transparent;
 }
 
-.menu {
-	position: relative;
-	display:  inline-block;
-	width: 30px;
-	height: 30px;
-}
-.menu span {
-	margin: 0 auto;
-	position: relative;
-	top: 12px;
-}
-.menu span:before, .menu span:after {
-	position: absolute;
-	content: '';
-}
-.menu span, .menu span:before, .menu span:after {
-	width: 30px;
-	height: 4px;
-	background-color: #00b4e6;
-	display: block;
-}
-.menu span:before {
-	margin-top: -10px;
-}
-.menu span:after {
-	margin-top: 10px;
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
 }
 
-.navbar-toggle span {
-	-webkit-transition: 0.2s ease 0s; transition: 0.2s ease 0s;
-}
-.navbar-toggle span:before, .navbar-toggle span:after {
-	-webkit-transition-property: margin, opacity; transition-property: margin, opacity;
-	-webkit-transition-duration: 0.2s, 0s; transition-duration: 0.2s, 0s;
-	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
-}
-.navbar-toggle:hover span {
-	width: 16px;
-	height: 16px;
-	margin-top: -5px;
-	-webkit-border-radius: 50%; border-radius: 50%;
-	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
-}
-.navbar-toggle:hover span:before, .navbar-toggle:hover span:after {
-	margin-top: 0px;
-	opacity: 0;
-	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
-}
+.navbar-toggle:hover {
+    background: transparent !important;
+  }
+
+.navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+  }
+
+.navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+
+.navbar-toggle .middle-bar {
+    opacity: 0;
+  }
+
+.navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+
+.navbar-toggle.collapsed .top-bar {
+    transform: rotate(0);
+  }
+
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+  }
+
+.navbar-toggle.collapsed .bottom-bar {
+    transform: rotate(0);
+  }
 
 /* ----------------------------------------------------------------- */
 /* Custom Top Nav END -----------------------------------------------*/
@@ -483,10 +474,24 @@ section {
   text-align: center;
   color: #fff;
 }
+
 .box {
   margin-bottom: 30px;
-  min-height: 340px;
+  min-height: 360;
 }
+
+@media(min-width:768px) {
+  .box {
+    min-height: 465px;
+  }
+}
+
+@media(min-width:992px) {
+  .box {
+    min-height: 365px;
+  }
+}
+
 
 .box-title {
 
