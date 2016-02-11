@@ -13,6 +13,10 @@ $(document).ready(function() {
 
 });
 
+$(document).bind('mobileinit',function(){
+	$.mobile.loadingMessage = false;
+});
+
 map();
 
 function map() {
