@@ -3,6 +3,14 @@ $(document).ready(function() {
     scrollOffset: 70,
 		scrollSpeed: 750,
 	});
+
+	$(".carousel").swiperight(function() {
+    $(this).carousel('prev');
+	});
+	$(".carousel").swipeleft(function() {
+	    $(this).carousel('next');
+	});
+
 });
 
 map();
