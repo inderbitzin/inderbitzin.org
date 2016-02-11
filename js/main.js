@@ -3,6 +3,14 @@ $(document).ready(function() {
     scrollOffset: 70,
 		scrollSpeed: 750,
 	});
+
+	$("#fade-quote-carousel").swiperight(function() {
+      $("#fade-quote-carousel").carousel('prev');
+    });
+   $("#fade-quote-carousel").swipeleft(function() {
+      $("#fade-quote-carousel").carousel('next');
+   });
+
 });
 
 map();
