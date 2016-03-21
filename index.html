@@ -282,20 +282,19 @@
                   <h3>Kontakt Formular</h3>
                   <p>Kontakt Formular ausfüllen um uns eine Nachricht zu senden:</p>
               </div>
+              <div id="form-messages"></div>
               <div class="form-bottom contact-form">
-                  <form action="//formspree.io/remo@inderbitzin.org" method="POST">
+                  <form id="ajax-contact" action="mailer.php" method="POST">
                       <div class="form-group">
-                          <input type="text" name="name" placeholder="Name..." class="contact-name form-control" id="contact-name">
+                          <input type="text" id="name" name="name" placeholder="Name..." class="contact-name form-control" required>
                       </div>
                       <div class="form-group">
-                        <input type="text" name="_replyto" placeholder="E-Mail Adresse..." class="contact-email form-control" id="contact-email">
+                        <input type="text" id="email" name="email" placeholder="E-Mail Adresse..." class="contact-email form-control" required>
                       </div>
                       <div class="form-group">
-                          <textarea name="message" placeholder="Nachricht..." class="contact-message form-control" id="contact-message"></textarea>
+                          <textarea id="message" name="message" placeholder="Nachricht..." class="contact-message form-control" required></textarea>
                       </div>
-                      <input type="hidden" name="_subject" value="inderbitzin.org Kontaktanfrage" />
-                      <input type="text" name="_gotcha" style="display:none" />
-                      <input type="submit" id="form-submit" class="btn btn-default btn-lg" value="Senden">
+                      <button type="submit" class="btn btn-default btn-lg">Senden</button>
                   </form>
               </div>
           </div>
