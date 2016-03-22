@@ -70,8 +70,8 @@ function contactForm() {
 				})
 				.done(function(response) {
 						// Make sure that the formMessages div has the 'success' class.
-						$(formMessages).removeClass('error');
-						$(formMessages).addClass('success');
+						$(formMessages).removeClass('alert alert-danger');
+						$(formMessages).addClass('alert alert-success');
 
 						// Set the message text.
 						$(formMessages).text(response);
@@ -80,17 +80,20 @@ function contactForm() {
 						$('#name').val('');
 						$('#email').val('');
 						$('#message').val('');
+						grecaptcha.reset();
 				})
 				.fail(function(data) {
 						// Make sure that the formMessages div has the 'error' class.
-						$(formMessages).removeClass('success');
-						$(formMessages).addClass('error');
+						$(formMessages).removeClass('alert alert-success');
+						$(formMessages).addClass('alert alert-danger');
 
 						// Set the message text.
 						if (data.responseText !== '') {
 								$(formMessages).text(data.responseText);
+								grecaptcha.reset();
 						} else {
 								$(formMessages).text('Hoppla! Es gab einen Fehler und Ihre Nachricht wurde nicht gesendet.');
+								grecaptcha.reset();
 						}
 				});
 		});

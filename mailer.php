@@ -17,6 +17,33 @@
             exit;
         }
 
+        $secret = "6LcHaBsTAAAAAMgCjgRadpM6H765UxoMP9kFZKrN";
+        $captcha = $_POST['g-recaptcha-response'];
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+
+        $data = ['secret'   => $secret,
+                 'response' => $captcha,
+                 'remoteip' => $ip];
+
+        $options = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'POST',
+                'content' => http_build_query($data)
+            ]
+        ];
+
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        $return = json_decode($result);
+
+        if (!$return->success) {
+          http_response_code(500);
+          echo('reCAPTCHA Prüfung fehlerhaft! Fehler: ' . join(', ', $result->{"error-codes"}));
+          exit;
+        }
+
         // Set the recipient email address.
         $recipient = "remo@inderbitzin.org";
 
@@ -29,7 +56,12 @@
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
-        $email_headers = "From: $name <$email>" . "\r\n" . "Reply-To: $email";
+        $email_headers = "From: $name <$email>\n";
+        $email_headers .= "Reply-To: $email\n";
+        $email_headers .= "X-Priority: 1 (Higuest)\n";
+        $email_headers .= "X-MSMail-Priority: High\n";
+        $email_headers .= "Importance: High\n";
+
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
