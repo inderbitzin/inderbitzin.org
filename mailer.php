@@ -58,7 +58,9 @@
         // Build the email headers.
         $email_headers = "From: $name <$email>\n";
         $email_headers .= "Reply-To: $email\n";
-        $email_headers .= "Content-Type: text/plain; Charset=utf-8\n"; 
+        $email_headers .= "Content-Type: text/plain; charset=UTF-8\n";
+        $email_headers .= "MIME-Version: 1.0\n";
+        $email_headers .= "Content-Transfer-Encoding: quoted-printable\n"; 
         $email_headers .= "X-Priority: 1 (Higuest)\n";
         $email_headers .= "X-MSMail-Priority: High\n";
         $email_headers .= "Importance: High\n";
